@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<h3>Выберите интересующие подсемейства</h3>
+<div class="row">
+        {% for Subfamily in CactusSubfamils %}
+            <form class="gem_container"  style="color:green" enctype="multipart/form-data">
+                   <a href="{%  url 'cactus_genus' Subfamily.id  %}"><h4>{{ Subfamily.name }}</h4></a>
+                    <img src='/media/cactus_plants/{{Subfamily.image }}' height="150px" width="250px" style="float:left;
+                    display:inline ; margin:10px">
+                   <p style="min-height:200px;">{{ Subfamily.description }}</p>
+            </form>
+        {% endfor %}
+</div>
+{% endblock%}

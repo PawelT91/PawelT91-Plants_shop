@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<h1>Обо мне</h1>
+<br>
+<p>Я начинающий программист Python, сделал этот проект в целях изучения фреймфорка Django</p>
+<br>
+<p>Мой телефон: 8 966 134 60 99</p>
+<br>
+<p>Другие способы связатья со мной</p>
+<a href="https://vk.com/id16613709" title="Vkontakte" target="_blank">
+    <img src="{% static 'img/VK.png' %}" width="30px" height="30px">
+</a>
+<a href="mailto:ptupikow@mail.ru" title="letter_box" target="_blank">
+    <img src="{% static 'img/letter.png' %}" width="30px" height="30px">
+</a>
+<a href="skype:paweltupikow?chat" title="skype" target="_blank">
+    <img src="{% static 'img/skype-31.png' %}" width="30px" height="30px">
+</a>
+<a href="https://www.facebook.com/ptupikow" title="skype" target="_blank">
+    <img src="{% static 'img/FB.png' %}" width="30px" height="30px">
+</a>
+{% endblock%}

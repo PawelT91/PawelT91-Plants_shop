@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<h3>{{Subfamilys.name}}</h3>
+<div class="row">
+    <form class="gem_container"  style="color:green" enctype="multipart/form-data">
+        <img src='/media/cactus_plants/{{Subfamilys.image }}' height="150px" width="250px" style="float:left;display:inline ; margin:10px">
+        <p style="min-height:200px;">{{ Subfamilys.description }}</p>
+    </form>
+</div>
+<h5>В данном подсемействе есть следующие рода</h5>
+    <ul style="list-style:none">
+        {% for Gen in Genus %}
+        <a href="{%  url 'cactus_view' Gen.id  %}"><li>{{Gen.name}}</li></a>
+        {% endfor %}
+    </ul>
+        {% if not Genus %}
+        <h3>Просим прощения но на данный момент в каталоге нет ничего подходящего</h3>
+        {% endif %}
+{% endblock%}

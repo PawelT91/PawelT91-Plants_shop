@@ -1,0 +1,61 @@
+.navbar-inverse .navbar-inner {
+background-image: linear-gradient(to bottom, #53e418, #0a0907);
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #FFFF00;
+    }
+
+body {
+        padding-top: 60px;
+        padding-bottom: 25px;
+        background-repeat: no-repeat;
+        background-size: 100%
+}
+
+#con {
+/*height: 371px;*/
+background-color:rgba(238,238,238,0.5);
+}
+
+#er {
+color: #61280d;
+}
+
+#hel {
+color: #61280d;
+font-family:algerian;
+}
+
+#red {
+font-family: Verdana ;
+}
+
+#hel2 {
+color: #61280d;
+font-family:algerian;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.hero-unit {
+  min-height: calc(80vh - 100px);
+  min-height: calc(70vh - 100px);
+}
+
+.table_plants{
+    border:3px solid black;
+    text-align:center;
+}
+
+td,th{
+    border:3px solid green;
+    padding:5px;
+}
+.admin_a{
+    color:Fuchsia;
+}
+.admin_plants{
+    color:MediumVioletRed;
+}

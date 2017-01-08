@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<h1>{{Genus.name}}  </h1>
+<br>
+<p>{{Genus.description}}</p>
+<table class="table_plants">
+    <tr>
+        <th>Вид</th>
+        <th>Фото</th>
+        <th>Сложность в культуре</th>
+        <th>Ареал</th>
+        <th>Диаметр сеянцев(мм)</th>
+        {% if user.is_authenticated %}
+        <th>Цена(руб)</th>
+        {% endif %}
+    </tr>
+{% for Cac in Cactus %}
+    <tr>
+        <td><b>{{Genus.name}} {{Cac.type}}</b></td>
+        <td><img src='/media/cactus_plants/{{Cac.image }}' height="150" width="250" style="float:left;
+                    display:inline ; margin:10px"></td>
+        <td>{{Cac.complexity_of_cultivation}}</td>
+        <td>{{Cac.area}}</td>
+        <td>{{Cac.diametr}}</td>
+        {% if user.is_authenticated %}
+        <td>{{Cac.price}}</td>
+        {% endif %}
+    </tr>
+    <tr>
+        {% if user.is_authenticated %}
+        <td colspan="7" ><p>{{Cac.description}}</p></td>
+        {% else %}
+        <td colspan="6" ><p>{{Cac.description}}</p></td>
+        {% endif %}
+    </tr>
+{% endfor %}
+</table>
+{% endblock%}

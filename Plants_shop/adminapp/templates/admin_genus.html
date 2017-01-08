@@ -1,0 +1,12 @@
+{% extends "admin_base.html" %}
+{% block content %}
+    {{objects}}
+    {% for gen in object_list %}
+    <li>
+        <b><a class="admin_plants" href="{% url 'genus_detail' gen.id %}">{{gen.name}}</a></b>
+        <b><a class="admin_plants" href="{% url 'genus_delete' gen.id %}">Удалить</a></b>
+        <b><a class="admin_plants" href="{% url 'genus_update' gen.id %}">Редактировать</a></b>
+    </li>
+    {% endfor %}
+    <b><a class="admin_plants" href="{% url 'genus_create' %}">Добавить</a></b>
+{% endblock %}
