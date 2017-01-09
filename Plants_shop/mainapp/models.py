@@ -28,8 +28,8 @@ class ViewCactus(models.Model):
     image = models.ImageField(verbose_name='Картинка', blank=True)
     complexity_of_cultivation = models.CharField(verbose_name='Сложность выращивания', max_length=16)
     price = models.FloatField(verbose_name='Цена', blank=True)
-    area = models.CharField(verbose_name=u'Меcто прозизрастания', max_length=32, unique=True)
-    diametr = models.CharField(verbose_name=u'Диаметр сеянцев(мм)', max_length=32, unique=True)
+    area = models.CharField(verbose_name=u'Меcто прозизрастания', max_length=32)
+    diametr = models.CharField(verbose_name=u'Диаметр сеянцев(мм)', max_length=32)
     description = models.TextField(verbose_name='Описание', blank=True)
 
     def __str__(self):

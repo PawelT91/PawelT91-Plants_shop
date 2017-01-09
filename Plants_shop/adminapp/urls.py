@@ -13,9 +13,9 @@ urlpatterns = [
 
     url(r'^view$', ViewsListView.as_view(), name='genus_view'),
     url(r'^view/detail/(?P<pk>\d+)/$', ViewsDetailView.as_view(), name='view_detail'),
-    url(r'^view/update/(?P<pk>\d+)/$', ViewsUpdateView.as_view(), name='genus_update'),
-    url(r'^view/delete/(?P<pk>\d+)/$', ViewsDeleteView.as_view(), name='genus_delete'),
-    url(r'^view/create$', ViewsCreateView.as_view(), name='genus_create'),
+    url(r'^view/update/(?P<pk>\d+)/$', ViewsUpdateView.as_view(), name='view_update'),
+    url(r'^view/delete/(?P<pk>\d+)/$', ViewsDeleteView.as_view(), name='view_delete'),
+    url(r'^view/create$', ViewsCreateView.as_view(), name='view_create'),
 
     url(r'^delete/user/(\d+)$', delete_user, name='delete_user'),
     url(r'^get_user_form/(\d+)$', get_user_form),
